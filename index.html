@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>BirthTimeWatcher</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function timeWatcher(){
+				now = new Date();
+				birthTime = new Date( document.birthForm.year.value, document.birthForm.month.value-1, document.birthForm.day.value );
+				timeDiff = now.getTime() - birthTime.getTime();
+				timeDiff /= 1000;//ミリ秒から秒に治す
+				document.birthForm.displayBirthSec.value = "生まれてから " + (timeDiff) + "秒経ちました";
+				setTimeout('timeWatcher()', 10);
+			}
+		</script>
+		<form name="birthForm">生年月日 (西暦)
+			<input type="text" size="4" name="year">年
+			<input type="text" size="2" name="month">月
+			<input type="text" size="2" name="day">日
+			<input type="button" value="ＯＫ" onclick="timeWatcher()">
+			<input type="text" size="50" name="displayBirthSec">
+		</form>
+</body>
+</html>
