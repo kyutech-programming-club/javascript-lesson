@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>LifeTimer</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+  function pushButton(){
+    alert("ボタンが押されました")
+  }
+</script>
+
+<h1>人生時計</h1>
+<h4>あなたが生まれて何秒経過しましたか?</h4>
+
+<!--ボタンを削除、フォームを追加-->
+<form name="birthForm">
+  生年月日を入力！ <input type="text" size="4" name="year" />年
+  <input type="text" size="2" name="month" />月
+  <input type="text" size="2" name="day" />日
+  <input type="button" value="OK!" onclick="pushButton()" /><br>
+</form>
+<!-------------------------->
+
+</body>
+
+<style>
+  body {
+    background: white;
+    color: #323232;
+    font-weight: 300;
+    height: 100vh;
+    margin: 0;
+    display: initial;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: initial;
+  }
+</style>
+</html>
