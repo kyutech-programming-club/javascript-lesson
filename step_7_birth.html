@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>BirthTimeWatcher</title>
-  </head>
-  <style>
-    body {
-      background: white;
-      color: #323232;
-      font-family: Helvetica neue, roboto;
-    }
-  </style>
-  <body>
-    <script type="text/javascript">
-      function timeWatcher(){
-        now = new Date();
-        birthTime = new Date( document.birthForm.year.value, document.birthForm.month.value-1, document.birthForm.day.value );
-        timeDiff = now.getTime() - birthTime.getTime();
-        timeDiff /= 1000;//ミリ秒から秒に治す
-        document.birthForm.displayBirthSec.value = "生まれてから " + (timeDiff) + "秒経ちました";
-      }
-    </script>
-    <h1>人生時計</h1>
-    <h4>あなたが生まれてから何秒?</h4>
-    <form name="birthForm">
-      生年月日を入力！ <input type="text" size="4" name="year" />年
-      <input type="text" size="2" name="month" />月
-      <input type="text" size="2" name="day" />日
-      <input type="button" value="OK!" onclick="timeWatcher()" />
-      <input type="text" size="50" name="displayBirthSec" />
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>LifeTimer</title>
+</head>
 
+<body>
+
+<script type="text/javascript">
+  function lifeTimer(){
+    let year = document.birthForm.year.value
+    let month = document.birthForm.month.value
+    let day = document.birthForm.day.value
+
+    let birth = new Date(year, month-1, day)
+    let now = new Date()
+
+    let timeDiff = now.getTime() - birth.getTime()
+    document.birthForm.display.value = (timeDiff / 1000)
+  }
+</script>
+
+<h1>人生時計</h1>
+<h4>あなたが生まれて何秒経過しましたか?</h4>
+<form name="birthForm">
+  生年月日を入力！ <input type="text" size="4" name="year" />年
+  <input type="text" size="2" name="month" />月
+  <input type="text" size="2" name="day" />日
+  <input type="button" value="OK!" onclick="lifeTimer()" /><br>
+  生まれてから<input type="text" size="16" name="display" />秒経ちました
+</form>
+
+</body>
+
+<style>
+  body {
+    background: white;
+    color: #323232;
+    font-weight: 300;
+    height: 100vh;
+    margin: 0;
+    display: initial;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: initial;
+  }
+</style>
 </html>
-
-
-
