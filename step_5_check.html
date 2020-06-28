@@ -8,6 +8,8 @@
 <body>
 
 <script type="text/javascript">
+
+  /*--pushButtonを削除、lifeTimerに変更--*/
   function lifeTimer(){
     let year = document.birthForm.year.value
     let month = document.birthForm.month.value
@@ -15,6 +17,8 @@
 
     alert(year +"年" + month + "月" + day + "日")
   }
+  /*-----------------------------------*/
+
 </script>
 
 <h1>人生時計</h1>
@@ -23,7 +27,11 @@
   生年月日を入力！ <input type="text" size="4" name="year" />年
   <input type="text" size="2" name="month" />月
   <input type="text" size="2" name="day" />日
+
+  <!--関数名を変更-->
   <input type="button" value="OK!" onclick="lifeTimer()" /><br>
+  <!-------------->
+
 </form>
 
 </body>

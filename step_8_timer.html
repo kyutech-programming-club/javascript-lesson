@@ -15,10 +15,14 @@
 
     let birth = new Date(year, month-1, day)
     let now = new Date()
-    let timeDiff = now.getTime() - birth.getTime()
 
+    let timeDiff = now.getTime() - birth.getTime()
     document.birthForm.display.value = (timeDiff / 1000)
+
+    /*--setTimeoutを追加--*/
     setTimeout('lifeTimer()', 10)
+    /*-------------------*/
+
   }
 </script>
 

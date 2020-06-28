@@ -16,8 +16,11 @@
     let birth = new Date(year, month-1, day)
     let now = new Date()
 
+    /*--時刻を計算、表示に変更--*/
     let timeDiff = now.getTime() - birth.getTime()
     document.birthForm.display.value = (timeDiff / 1000)
+    /*----------------*/
+
   }
 </script>
 
@@ -28,7 +31,11 @@
   <input type="text" size="2" name="month" />月
   <input type="text" size="2" name="day" />日
   <input type="button" value="OK!" onclick="lifeTimer()" /><br>
+
+  <!--表示部分を追加-->
   生まれてから<input type="text" size="16" name="display" />秒経ちました
+  <!--------------->
+
 </form>
 
 </body>
