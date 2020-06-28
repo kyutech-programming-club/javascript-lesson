@@ -16,10 +16,6 @@
       function timeWatcher(){
         now = new Date();
         birthTime = new Date( document.birthForm.year.value, document.birthForm.month.value-1, document.birthForm.day.value );
-        timeDiff = now.getTime() - birthTime.getTime();
-        timeDiff /= 1000;//ミリ秒から秒に治す
-        document.birthForm.displayBirthSec.value = "生まれてから " + (timeDiff) + "秒経ちました";
-        setTimeout('timeWatcher()', 10);
       }
     </script>
     <h1>人生時計</h1>
@@ -34,5 +30,6 @@
   </body>
 
 </html>
+
 
 

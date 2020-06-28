@@ -19,7 +19,6 @@
         timeDiff = now.getTime() - birthTime.getTime();
         timeDiff /= 1000;//ミリ秒から秒に治す
         document.birthForm.displayBirthSec.value = "生まれてから " + (timeDiff) + "秒経ちました";
-        setTimeout('timeWatcher()', 10);
       }
     </script>
     <h1>人生時計</h1>
@@ -34,5 +33,6 @@
   </body>
 
 </html>
+
 
 
